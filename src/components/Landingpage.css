@@ -1,0 +1,760 @@
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+.backgroundimg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Desktop image visible by default */
+.desktopBg {
+  display: block;
+}
+
+.mobileBg {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .desktopBg {
+    display: none;
+  }
+
+  .mobileBg {
+    display: block;
+  }
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* =========================
+   2. NAVBAR
+========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(150px);
+
+  z-index: 1000;
+
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoimg{
+    height: 70px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+
+.enrollBtn,
+.mobileEnrollBtn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.mobileEnrollBtn {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 10px;
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+.mobileHeroImage {
+  display: none;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 0 8%;
+}
+
+.backgroundimg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  max-width: 700px;
+  color: white;
+  text-align: center;
+}
+
+.heroContent h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.heroContent h1 span {
+  color: #070707;
+}
+
+.heroContent p {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.heroButtons button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.firstbtn{
+    background-color: #070707;
+    color: #ddd;
+}
+.firstbtn:hover{
+    background-color: white;
+    color: #000;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+.secondaryBtn:hover{
+    background-color: white;
+    color: #000;
+}
+
+
+/* =========================
+   4. COURSES SECTION
+========================= */
+.courses {
+  padding: 100px 8%;
+}
+
+.courses h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.courseCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgb(165, 203, 218);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  color: black;
+  margin-bottom: 15px;
+}
+
+.card p {
+  line-height: 1.7;
+  color:white;
+}
+
+/* =========================
+   5. ABOUT SECTION
+========================= */
+.about {
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.aboutContent {
+  flex: 1;
+}
+
+.about img {
+  width: 450px;
+  border-radius: 20px;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+.about p {
+  line-height: 1.8;
+}
+
+/* =========================
+   6. WHY CHOOSE US
+========================= */
+.whyUs {
+  padding: 100px 8%;
+  background-color: rgb(165, 203, 218);
+}
+
+.whyUs h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: black;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+}
+
+.feature {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.feature h3 {
+  margin-bottom: 15px;
+  color: #0d6efd;
+}
+
+/* =========================
+   7. CONTACT SECTION
+========================= */
+.contact {
+  padding: 100px 8%;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact form {
+  max-width: 700px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.contact textarea {
+  height: 150px;
+}
+
+.contact button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* =========================
+   8. FOOTER
+========================= */
+footer {
+  background: rgb(165, 203, 218);
+  color: black;
+  text-align: center;
+  padding: 25px;
+}
+
+/* =========================
+   9. MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+
+  /* Navbar */
+    .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(165, 203, 218, 0.852); /* Light blue overlay */
+    z-index: 1;
+  }
+
+  .heroContent {
+    position: relative;
+    z-index: 2;
+  }
+
+  .navbar {
+    height: 70px;
+    padding: 0 20px;
+    background-color: rgba(6, 6, 6, 0.011);
+    
+  }
+
+  .enrollBtn {
+    display: none;
+    background-color: #070707;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(165, 203, 218, 0.852);
+
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 25px 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+  }
+
+  .navLinks.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  .h22{
+    font-size: 15px;
+  }
+  /* Hero */
+
+    .mobileHeroImage {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto;
+    object-fit: contain;
+  }
+
+  .hero {
+    min-height: 550px;
+    /* background-color: black; */
+    color: black;
+    /* padding: 90px 20px 40px; */
+  }
+/* 
+  .heroContent {
+    background: rgba(0,0,0,.55);
+    backdrop-filter: blur(5px); */
+
+    /* padding: 20px;
+    border-radius: 15px; */
+
+    /* max-width: 330px;
+  } */
+
+  .heroContent h1 {
+    font-size:48px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+  }
+
+  .heroContent p {
+    font-size: 24px;
+    color: #070707;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+    size: 50px;
+    
+  }
+
+  .heroButtons button {
+    width: 50%;
+    justify-content: center;
+  }
+  
+  .firstbtn{
+    background-color: black;
+    color: white;
+  }
+  .firstbtn:hover{
+    background-color: white;
+  }
+  .secondaryBtn{
+    background-color: aliceblue;
+    color: #070707;
+  }
+  .secondaryBtn:hover {
+  background: black;
+  color: white;
+}
+
+  /* Sections */
+
+  .courses,
+  .about,
+  .whyUs,
+  .contact {
+    padding: 70px 20px;
+  }
+  
+  .courseCards,
+  .features {
+    grid-template-columns: 1fr;
+    
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about img {
+    width: 100%;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+}
+
+.contact {
+  padding: 100px 8%;
+  background:white;
+  color: white;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.contactInfo {
+  flex: 1;
+}
+
+.contactInfo h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.contactInfo p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: black;
+}
+
+.contactDetails {
+  margin-top: 40px;
+}
+
+.detail {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  align-items: flex-start;
+}
+
+.detail span {
+  font-size: 24px;
+  color: #f8a100;
+}
+
+.detail p {
+  margin: 0;
+}
+
+.contactForm {
+  flex: 1;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid rgba(10, 10, 10, 0.945);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: black;
+}
+
+.contactForm button {
+  background:black;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contactForm button:hover {
+  background: rgba(165, 203, 218, 0.852);
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contactInfo h2 {
+    font-size: 32px;
+  }
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 70px 20px;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .contactInfo {
+    text-align: center;
+  }
+
+  .contactInfo h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .contactInfo > p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+
+  .contactDetails {
+    margin-top: 30px;
+  }
+
+  .detail {
+    justify-content: center;
+    text-align: left;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .detail span {
+    font-size: 22px;
+    min-width: 25px;
+  }
+
+  .detail p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .contactForm {
+    width: 100%;
+  }
+
+  .contactForm form {
+    gap: 15px;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    padding: 16px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  .contactForm button {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 60px 15px;
+  }
+
+  .contactInfo h2 {
+    font-size: 28px;
+  }
+
+  .contactInfo > p {
+    font-size: 15px;
+  }
+
+  .detail {
+    align-items: flex-start;
+  }
+
+  .detail p {
+    font-size: 14px;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .contactForm button {
+    padding: 15px;
+    font-size: 15px;
+  }
+}
+.contactForm {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: rgba(165, 203, 218, 0.852);
+  box-shadow: 0 0 15px rgba(248, 161, 0, 0.25);
+}
+
+.contactForm button {
+  background: linear-gradient( rgba(165, 203, 218, 0.852));
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.contactForm button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(248, 161, 0, 0.3);
+}
+
