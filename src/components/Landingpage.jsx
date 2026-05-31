@@ -12,19 +12,19 @@ import img1 from "./image1.jpg";
 import img2 from "./image2.jpg";
 import img3 from "./image3.jpg";
 
-const Home = () => {
-const [menuOpen, setMenuOpen] = useState(false);
-
 const heroImages = [img1, img2, img3];
-const [currentImage, setCurrentImage] = useState(0);
 
-React.useEffect(() => {
-  const interval = setInterval(() => {
-    setCurrentImage((prev) => (prev + 1) % heroImages.length);
-  }, 3000);
+const Home = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
 
-  return () => clearInterval(interval);
-}, []);
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="home">
@@ -34,8 +34,11 @@ React.useEffect(() => {
       ========================= */}
       <nav className="navbar">
         <div className="logo">
-          <img src={logo} className="logoimg" />
-        </div>
+    <img
+  src={logo}
+  alt="Prime Code AI Medical Coding Institute Logo"
+  className="logoimg"
+/>        </div>
 
         <div
           className="hamburger"
