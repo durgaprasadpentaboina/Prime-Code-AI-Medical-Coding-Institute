@@ -296,7 +296,7 @@ const Home = () => {
 
         <div className="detail">
           <span>📞</span>
-          <p>+91 8096889967</p>
+          <p>+91 9347244373</p>
         </div>
 
         <div className="detail">
